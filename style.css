@@ -1,9 +1,13 @@
 body {
-    background-color: wheat;
+    background-color: #cffa8b;
 }
-
 h1 {
-    color: cadetblue;
+    font-size: 85px;
+    color: #cffa8b;
+    background-color: black;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 h3 {
     color: indigo;
@@ -17,4 +21,38 @@ h3 {
 .countable {
     white-space: nowrap;
     width: 50%;
+    background-color: #7f9711cb;
+}
+
+#tCount {
+    background-color: #334910;
+    width: 5%;
+    margin-left: 40%;
+}
+
+.input {
+    float: right;
+    width: 50%;
+    font-size: larger;
+    background-color: #7f9711cb;
+    color: indigo;
+    text-align: right;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-color: #cbfdcb;
+}
+.btn {
+    border-color: #334910;
+    float: right;
+    width: 8%;
+    font-size: larger;
+    font-weight: 00;
+    background-color: #334910;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: #cbfdcb;
+    margin-bottom: 1%;
+
 }

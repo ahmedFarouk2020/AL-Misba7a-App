@@ -19,9 +19,9 @@ document.addEventListener( "click" ,function (ev) {
     } else if (ev.target.classList.contains("btn")) {
         // get data in input
         input = document.getElementsByClassName("input")[0];
-        console.log(input);
+        
         newZikrData = input.value;
-        console.log(newZikrData)
+        if (newZikrData === '') { return }
         // create new line (counter and zikr field)
         newZirkElement = document.querySelector(".countable").cloneNode(true);
         newZirkElement.textContent = newZikrData;

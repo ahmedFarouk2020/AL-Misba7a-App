@@ -1,16 +1,16 @@
 body {
-    background-color: #cffa8b;
+    background-color: #dfd49e;
 }
 h1 {
     font-size: 85px;
-    color: #cffa8b;
-    background-color: black;
+    color: #dfd49e;
+    background-color: #32301c;
     text-align: center;
     margin-left: 35%;
     margin-right: 35%;
 }
 h3 {
-    color: indigo;
+    color: #dfd49e;
     padding: 10px ;
     font-size: 50;
     padding-right: 1ch;
@@ -21,11 +21,11 @@ h3 {
 .countable {
     white-space: nowrap;
     width: 50%;
-    background-color: #7f9711cb;
+    background-color: #4B4A2F;
 }
 
 #tCount {
-    background-color: #334910;
+    background-color: #32301c;
     width: 5%;
     margin-left: 40%;
 }
@@ -34,25 +34,23 @@ h3 {
     float: right;
     width: 50%;
     font-size: larger;
-    background-color: #7f9711cb;
-    color: indigo;
+    background-color: #4B4A2F;
+    color: #dfd49e;
     text-align: right;
     padding-bottom: 7px;
     padding-top: 7px;
-    border-color: #cbfdcb;
 }
 .btn {
-    border-color: #334910;
     float: right;
     width: 8%;
     font-size: larger;
     font-weight: 00;
-    background-color: #334910;
+    background-color: #32301c;
+    color: #dfd49e;
     padding-top: 6px;
     padding-bottom: 7px;
     box-sizing: border-box;
     text-align: center;
-    border-color: #cbfdcb;
     margin-bottom: 1%;
 
 }

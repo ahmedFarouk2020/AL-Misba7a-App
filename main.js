@@ -20,6 +20,7 @@ document.addEventListener( "click" ,function (ev) {
         // get data in input
         input = document.getElementsByClassName("input")[0];
         
+        
         newZikrData = input.value;
         if (newZikrData === '') { return }
         // create new line (counter and zikr field)
@@ -32,6 +33,9 @@ document.addEventListener( "click" ,function (ev) {
         div.appendChild(newZirkElement);
         
         div.appendChild(newCounterElement);
+        
+        // remove data from input field
+        input.value = '';
     }
 })
 

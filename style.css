@@ -14,61 +14,52 @@ h1 {
 .countable {
     float: right;
     white-space: nowrap;
-    width: 50%;
+    width: 70%;
     color: #dfd49e;
     background-color: #4B4A2F;
     
     font-size: larger;
     text-align: right;
 
-    padding: 10px ;
-    margin-left: 1ch; 
+    padding: 2% ;
+    margin-left: 2%; 
     height: 25%;
 }
 
 #tCount {
     float: right;
     white-space: nowrap;
-    width: 10%;
+    width: 20%;
     color: #dfd49e;
     background-color: #32301c;
     
     font-size: larger;
     text-align: center;
     
-    padding: 10px ;
+    padding: 2% ;
     height: 25%;
 }
 
-.input {
-    white-space: nowrap;
-    float: right;
-    width: 50%;
-    font-size: larger;
-    background-color: #4B4A2F;
-    color: #dfd49e;
-    text-align: right;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    height: 20%;
-    padding: 10px ;
-    margin-left: 1ch; 
-
-}
-.btn {
+.btn, .input {
     white-space: nowrap;
     float: right;
     width: 25%;
     height: 20%;
     font-size: larger;
-    font-weight: bold;
     background-color: #32301c;
     color: #dfd49e;
     text-align: center;
-
-    padding: 10px ;
-
+    
+    padding: 2% ;
+    
 }
+.input {
+    width: 50%;
+    background-color: #4B4A2F;
+    text-align: right;
+    margin-left: 2%;
+}
+
 
 @media screen and (max-width: 300) {
     .input, .btn {

@@ -1,14 +1,14 @@
 body {
     background-color: #dfd49e;
 }
-h1 {
+.title {
     font-size: xx-large;
     font-weight: bold;
     color: #dfd49e;
     background-color: #32301c;
     text-align: center;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 .countable {
@@ -61,8 +61,11 @@ h1 {
 }
 
 
-@media screen and (max-width: 300) {
-    .input, .btn {
-      width: 100%; /* The width is 100%, when the viewport is 300 or smaller */
-    }
-  }
+@media screen and (max-width: 300px) {
+.input, .btn {
+    width: 100%;  /*The width is 100%, when the viewport is 300px or smaller */ 
+}800px
+.title {
+    width: 80%;  /*The width is 100%, when the viewport is 300px or smaller */ 
+}
+} 

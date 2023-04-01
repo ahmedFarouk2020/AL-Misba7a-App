@@ -1,7 +1,8 @@
 btn = document.createElement("button");
 btn.className = "btn";
 btn.textContent = "إضافة ذكر";
-document.body.append(btn);
+div = document.getElementsByTagName("div")[0];
+div.append(btn);
 
 document.addEventListener( "click" ,function (ev) {
     
@@ -20,19 +21,21 @@ document.addEventListener( "click" ,function (ev) {
         // get data in input
         input = document.getElementsByClassName("input")[0];
         
-        
         newZikrData = input.value;
+        
         if (newZikrData === '') { return }
         // create new line (counter and zikr field)
         newZirkElement = document.querySelector(".countable").cloneNode(true);
         newZirkElement.textContent = newZikrData;
         newCounterElement = document.querySelector(".counter").cloneNode(true);
+        newCounterElement.textContent = 0;
         // add zikr to new line
         div = document.getElementsByTagName("div")[0];
         
-        div.appendChild(newZirkElement);
+        // add the new elements to the top of div
+        div.prepend(newCounterElement);
+        div.prepend(newZirkElement);
         
-        div.appendChild(newCounterElement);
         
         // remove data from input field
         input.value = '';

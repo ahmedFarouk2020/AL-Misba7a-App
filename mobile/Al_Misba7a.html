@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>المِسْبَحَةُ</title>
+        <style>
+            body {
+    background-color: #dfd49e;
+}
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #dfd49e;
+    background-color: #32301c;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.countable {
+    float: right;
+    white-space: nowrap;
+    width: 70%;
+    color: #dfd49e;
+    background-color: #4B4A2F;
+    
+    font-size: larger;
+    text-align: right;
+
+    padding: 2% ;
+    margin-left: 2%; 
+    height: 25%;
+}
+
+#tCount {
+    float: right;
+    white-space: nowrap;
+    width: 20%;
+    color: #dfd49e;
+    background-color: #32301c;
+    
+    font-size: larger;
+    text-align: center;
+    
+    padding: 2% ;
+    height: 25%;
+}
+
+.btn, .input {
+    white-space: nowrap;
+    float: right;
+    width: 25%;
+    height: 20%;
+    font-size: larger;
+    background-color: #32301c;
+    color: #dfd49e;
+    text-align: center;
+    
+    padding: 2% ;
+    
+}
+.input {
+    width: 50%;
+    background-color: #4B4A2F;
+    text-align: right;
+    margin-left: 2%;
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .btn {
+        width: 30%;  /*The width is 100%, when the viewport is 300px or smaller */ 
+    }
+    .input {
+        width: 50;
+    }
+    .title {
+        width: 50%;  /*The width is 100%, when the viewport is 300px or smaller */ 
+    }
+} 
+        </style>
+</head>
+<body>
+    <h1 class="title" id="title-id" > المِسْبَحَةُ </h1>
+    <div style="white-space: nowrap">
+
+        <h3 id="counter" class=" countable" > عداد حر</h3>
+        <h3 id="tCount" class="counter"> 0 </h3>
+    </div>
+    <input class="input"  placeholder="اكتب الذكر هنا">
+    <script>
+       btn = document.createElement("button");
+btn.className = "btn";
+btn.textContent = "إضافة ذكر";
+div = document.getElementsByTagName("div")[0];
+div.append(btn);
+
+document.addEventListener( "click" ,function (ev) {
+    
+    if (ev.target.classList.contains("countable")) {
+
+        // get the next sibling (counter)
+        nextSib = ev.target.nextElementSibling;
+
+        counterVal = parseInt(nextSib.innerText);
+
+        // increment the counter
+        nextSib.textContent = `${++counterVal}`;
+    } else if (ev.target.classList.contains("counter")) {
+        ev.target.textContent = '0';
+    } else if (ev.target.classList.contains("btn")) {
+        // get data in input
+        input = document.getElementsByClassName("input")[0];
+        
+        newZikrData = input.value;
+        
+        if (newZikrData === '') { return }
+        // create new line (counter and zikr field)
+        newZirkElement = document.querySelector(".countable").cloneNode(true);
+        newZirkElement.textContent = newZikrData;
+        newCounterElement = document.querySelector(".counter").cloneNode(true);
+        newCounterElement.textContent = 0;
+        // add zikr to new line
+        div = document.getElementsByTagName("div")[0];
+        
+        // add the new elements to the top of div
+        div.prepend(newCounterElement);
+        div.prepend(newZirkElement);
+        
+        
+        // remove data from input field
+        input.value = '';
+    }
+})
+
+
+    </script>
+</body>
+</html>

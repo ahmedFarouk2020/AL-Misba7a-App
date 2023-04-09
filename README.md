@@ -2,9 +2,11 @@
 A Nice App for Zikr
 
 ## How to get started
-### From smart phone (Stay tuned)
-### From PC
 1. Clone [or download] the repo
+
+### From smart phone
+2. Run mobile/index.html file
+### From PC
 2. Run index.html file
 
 ## How to use
